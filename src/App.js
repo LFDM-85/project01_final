@@ -1,9 +1,10 @@
 import "./App.css";
+import BandPage from "./pages/BandPage";
 
 const App = () => {
   return (
-    <div>
-      <h1>Projecto 001</h1>
+    <div className="app">
+      <BandPage />
     </div>
   );
 };

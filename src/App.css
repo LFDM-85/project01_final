@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&family=Smooch&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  background-image: linear-gradient(rgb(5, 25, 56), rgb(41, 58, 80));
+}
