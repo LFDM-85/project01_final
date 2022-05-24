@@ -11,7 +11,7 @@ const Album = (props) => {
           <h3>{album.releaseYear}</h3>
           <p>{album.description}</p>
         </div>
-        <ListMusic songs={album.songs}></ListMusic>
+        <ListMusic className="listmusic" songs={album.songs}></ListMusic>
       </div>
     );
   });

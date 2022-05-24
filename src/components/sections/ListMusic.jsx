@@ -12,11 +12,17 @@ const ListMusic = (props) => {
 
   const song = props.songs.map((song) => {
     return (
-      <div key={song.track}>
-        <div className="listmusic" key={song.title}>
-          <p className="track">#{song.track}</p>
-          <p className="song">{song.title}</p>
-          <p className="time">{song.length}</p>
+      <div key={song.track} className="listmusic">
+        <div className="list">
+          <div>
+            <p className="track">#{song.track}</p>
+          </div>
+          <div>
+            <p className="song">{song.title}</p>
+          </div>
+          <div>
+            <p className="time">{song.length}</p>
+          </div>
         </div>
       </div>
     );
