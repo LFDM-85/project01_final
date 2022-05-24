@@ -2,15 +2,22 @@ import { useState } from "react";
 
 import "./ListMusic.css";
 import Button from "../layout/Button";
+import React from "react";
 
-const ListMusic = (props) => {
+const ListMusic = ({ songs }: any) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const clickHandler = () => {
     return setIsVisible(!isVisible);
   };
 
-  const song = props.songs.map((song) => {
+  interface interfaceSong {
+    track: number;
+    title: string;
+    length: string;
+  }
+
+  const song = songs.map((song: interfaceSong) => {
     return (
       <div key={song.track} className="listmusic">
         <div className="list">
@@ -30,9 +37,11 @@ const ListMusic = (props) => {
   return (
     <div>
       {isVisible ? <div>{song}</div> : ""}
-      <Button className="button" onView={clickHandler}>
-        {isVisible ? "Hide tracks" : "Show traks"}
-      </Button>
+      <div>
+        <Button onView={clickHandler}>
+          {isVisible ? "Hide tracks" : "Show traks"}
+        </Button>
+      </div>
     </div>
   );
 };
